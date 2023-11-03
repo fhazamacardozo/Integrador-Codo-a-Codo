@@ -23,7 +23,9 @@ function resetearCampos(){
 }
 
 function actualizarTotal() {
-    const cantidad = parseFloat(document.getElementById("inputCantidad").value);
+    let cantidad = parseFloat(document.getElementById("inputCantidad").value);
+    if (isNaN(cantidad)){cantidad=0;}
+
     const categoria = document.getElementById("selectCategoria").value;
     const total = calcularTotal(cantidad, categoria);
     document.getElementById("inputTotal").value = "Total a pagar: $" + total;
