@@ -4,7 +4,6 @@ function calcularTotal (cantidad,categoria){
         case 'estudiante':
             total=(200*0.2)*cantidad;
             //80% descuento
-            console.log(cantidad)
             break;
         case 'trainee':
             total=(200*0.5)*cantidad;
