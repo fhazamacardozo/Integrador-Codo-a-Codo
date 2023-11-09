@@ -1,146 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>IntegradorFront tickets</title>
 </head>
+
 <body>
-    
-    <!-- navbar -->
-    <div>
-        <nav class="navbar navbar-expand-lg bg-dark border-bottom px-5" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="img\codoacodo.png" width="90" height="52">
-                    Conf Bs As
-                </a>
+    <header>
+        <!-- navbar -->
+        <div>
+            <nav class="navbar navbar-expand-lg bg-dark border-bottom px-5" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="imgLogo" src="img\codoacodo.png">
+                        Conf Bs As
+                    </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">La conferencia</a>
-                        </li>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">La conferencia</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Los oradores</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Los oradores</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">El lugar y la fecha</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Conviértete en orador</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">El lugar y la fecha</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-success" href="#">Comprar tickets</a>
-                        </li>
-                    </ul>
-                
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Conviértete en orador</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link link-compra">Comprar tickets</a>
+                            </li>
+                        </ul>
+
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </div>
-    
-    <!-- cards precios -->
-    <div class="d-flex justify-content-center mt-3">
-        <div class="w-auto row">
-            <!-- Card 1 -->
-            <div class="col card border-primary mx-1 mb-3 rounded-0 p-0" style="max-width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Estudiante</h5>
-                    <p class="card-text text-center">Tiene un descuento</p>
-                    <h5 class="text-center">80%</h5>
-                    <p class="text-center small text-body-secondary ">*presentar documentacion</p>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="col card border-info mx-1 mb-3 rounded-0 p-0" style="max-width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Trainee</h5>
-                    <p class="card-text text-center">Tiene un descuento</p>
-                    <h5 class="text-center">50%</h5>
-                    <p class="text-center small text-body-secondary ">*presentar documentacion</p>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col card border-warning mx-1 mb-3 rounded-0 p-0" style="max-width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Junior</h5>
-                    <p class="card-text text-center">Tiene un descuento</p>
-                    <h5 class="text-center">15%</h5>
-                    <p class="text-center small text-body-secondary ">*presentar documentacion</p>
-                </div>
-            </div>
+            </nav>
         </div>
-
-    </div>
-    <br>
-
-    <!-- formulario -->
-    <div class="text-center">
-        <p class="mb-1 text-small">VENTA</p>
-        <h2 class="mb-2">VALOR DE TICKET $200</h2>    
-    </div>
-    <div class="d-flex justify-content-center">
-        <div class="w-auto">
-            <form class="w-100">
-                <div class="row mb-3">
-                    <div class="col-6">
-                        <input type="text" class="form-control" id="inputNombre" placeholder="Nombre"> 
-                    </div>
-                    <div class="col-6">
-                        <input type="text" class="form-control" id="inputApellido" placeholder="Apellido">
+    </header>
+    <main>
+        <!-- cards precios -->
+        <div class="d-flex justify-content-center mt-3">
+            <div class="w-auto row">
+                <!-- Card 1 -->
+                <div class="col card border-primary mx-1 mb-3 rounded-0 p-0" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Estudiante</h5>
+                        <p class="card-text text-center">Tiene un descuento</p>
+                        <h5 class="text-center">80%</h5>
+                        <p class="text-center small text-body-secondary ">*presentar documentacion</p>
                     </div>
                 </div>
+                <!-- Card 2 -->
+                <div class="col card border-info mx-1 mb-3 rounded-0 p-0" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Trainee</h5>
+                        <p class="card-text text-center">Tiene un descuento</p>
+                        <h5 class="text-center">50%</h5>
+                        <p class="text-center small text-body-secondary ">*presentar documentacion</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col card border-warning mx-1 mb-3 rounded-0 p-0" style="max-width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Junior</h5>
+                        <p class="card-text text-center">Tiene un descuento</p>
+                        <h5 class="text-center">15%</h5>
+                        <p class="text-center small text-body-secondary ">*presentar documentacion</p>
+                    </div>
+                </div>
+            </div>
 
-                <div>
-                    <input type="text" class="form-control mb-3" id="inputCorreo" placeholder="Correo">
-                </div>
-                
-                <div class="row mb-3">
-                    <div class="col-6">
-                        <label for="inputCantidad">Cantidad</label>
-                        <input type="number" class="form-control" id="inputCantidad" placeholder="Cantidad" min="0"> 
-                    </div>
-                    <div class="col-6">
-                        <label for="selectCategoria">Categoría</label>
-                        <select class="form-select" id="selectCategoria" aria-label="categ">
-                            <option selected value="estudiante">Estudiante</option>
-                            <option value="trainee">Trainee</option>
-                            <option value="junior">Junior</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <input type="text" class="form-control bg-primary-subtle" id="inputTotal" value="Total a pagar: $" disabled> 
-                </div>
-
-                <div class="row">
-                    <div class="col-6">
-                        <button type="submit" id="btnBorrar" class="btn btn-success w-100 ">Borrar</button>
-                    </div>
-                    <div class="col-6">
-                        <button type="submit" id="btnResumen" class="btn btn-success w-100">Resumen</button>
-                    </div>
-                </div>
-            </form>
         </div>
-    </div>
-    <br>
+        <br>
 
+        <!-- formulario -->
+        <section>
+            <div class="text-center">
+                <p class="mb-1 text-small">VENTA</p>
+                <h2 class="mb-2">VALOR DE TICKET $200</h2>
+            </div>
+        </section>
+        <section>
+            <div class="d-flex justify-content-center">
+                <div class="w-auto">
+                    <form class="w-100">
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="inputNombre" placeholder="Nombre">
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="form-control" id="inputApellido" placeholder="Apellido">
+                            </div>
+                        </div>
+
+                        <div>
+                            <input type="text" class="form-control mb-3" id="inputCorreo" placeholder="Correo">
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <label for="inputCantidad">Cantidad</label>
+                                <input type="number" class="form-control" id="inputCantidad" placeholder="Cantidad"
+                                    min="0">
+                            </div>
+                            <div class="col-6">
+                                <label for="selectCategoria">Categoría</label>
+                                <select class="form-select" id="selectCategoria" aria-label="categ">
+                                    <option selected value="estudiante">Estudiante</option>
+                                    <option value="trainee">Trainee</option>
+                                    <option value="junior">Junior</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="text" class="form-control bg-primary-subtle" id="inputTotal"
+                                value="Total a pagar: $" disabled>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <button type="submit" id="btnBorrar" class="btn btn-success w-100 ">Borrar</button>
+                            </div>
+                            <div class="col-6">
+                                <button type="submit" id="btnResumen" class="btn btn-success w-100">Resumen</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <br>
+    </main>
     <!-- footer -->
-    <footer class="gradiente ">
+    <footer>
         <ul class="nav justify-content-center align-items-center py-3 ">
             <li class="nav-item">
                 <a class="nav-link text-white" href="#">Preguntas <br> Frecuentes</a>
@@ -161,7 +173,7 @@
             <li class="nav-item">
                 <a class="nav-link text-white" href="#">Términos y <br> condiciones</a>
             </li>
-            
+
             <li class="nav-item">
                 <a class="nav-link text-white" href="#">Privacidad</a>
             </li>
@@ -174,6 +186,9 @@
     <!-- script ticket -->
     <script src="js/scriptTicket.js"></script>
     <!-- script bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

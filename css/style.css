@@ -1,4 +1,45 @@
-.gradiente{
-    background-color: #1b2845;
-    background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+.imgLogo{
+    width: 90px;
+    height: 52px;
+}
+
+footer{
+    background: linear-gradient(90deg, rgba(29,57,71,255),rgba(30,81,110,255));
+}
+
+.imgCarousel{
+    filter: brightness(.5);
+}
+
+.link-compra{
+    color: rgb(120, 210, 53);
+}
+
+.link-compra:hover{
+    color: rgb(40, 74, 15);
+}
+
+.btn-success{
+    background-color: rgb(40, 170, 70);
+}
+
+.contenedorOradores{
+    margin: 0 auto;
+    padding: 0;
+}
+
+.card-group{
+    margin: 0 auto;
+}
+
+.img-fluid{
+    width: 100%;
+}
+
+.p-0{
+    overflow-x:hidden;
+}
+
+#oradores{
+    padding-top: 1rem;
 }
