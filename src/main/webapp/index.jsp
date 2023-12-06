@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -18,7 +19,7 @@
         <div>
             <nav class="navbar navbar-expand-lg bg-dark border-bottom px-5" data-bs-theme="dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="index.jsp">
                         <img class="imgLogo" src="img\codoacodo.png">
                         Conf Bs As
                     </a>
@@ -36,19 +37,22 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Los oradores</a>
+                                <a class="nav-link" href="#orador">Los oradores</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">El lugar y la fecha</a>
+                                <a class="nav-link" href="#lugarfecha">El lugar y la fecha</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Conviértete en orador</a>
+                                <a class="nav-link" href="#serorador">Conviértete en orador</a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="tickets.html" class="nav-link link-compra">Comprar tickets</a>
+                                <a href="tickets.jsp" class="nav-link link-compra">Comprar tickets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="backoffice.jsp" class="nav-link text-warning">Back Office</a>
                             </li>
                         </ul>
 
@@ -87,14 +91,14 @@
                 <div class="pt-1 d-grid gap-2 d-md-block">
                     <button onclick="location.href='#oradores'" type="button" class="btn btn-outline-light">Quiero ser
                         orador</button>
-                    <button onclick="location.href='tickets.html'" type="button"
+                    <button onclick="location.href='tickets.jsp'" type="button"
                         class="btn colorverde text-light btn-success">Comprar tickets</button>
                 </div>
             </div>
         </div>
 
         <!-- cards con oradores -->
-        <section>
+        <section id="orador">
             <h2 class="text-center text-uppercase">
                 <span class="fs-6 fw-normal">Conoce a los</span>
             </h2>
@@ -161,7 +165,7 @@
         </section>
 
         <!-- card horizontal -->
-        <section class="container-fluid p-0 d-flex gap-1 text-white mt-4 align-items-stretch">
+        <section id="lugarfecha" class="container-fluid p-0 d-flex gap-1 text-white mt-4 align-items-stretch">
             <div class="col col-lg-6 col-md-12 col-sm-12">
                     <img src="img\honolulu.jpg" class="img-fluid" alt="Honolulu">
                     </div>
@@ -180,7 +184,7 @@
                         </div>
         </section>
         <!-- formulario -->
-        <section>
+        <section id="serorador">
             <div id="oradores" class="text-center">
                 <p class="mb-1 text-small">Conviértete en un</p>
                 <h2 class="mb-2">ORADOR</h2>
@@ -192,15 +196,15 @@
                     <form class="w-100">
                         <div class="row">
                             <div class="mb-3 col-6">
-                                <input type="text" class="form-control" id="inputNombre" placeholder="Nombre">
+                                <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" required>
                             </div>
                             <div class="mb-3 col-6">
-                                <input type="text" class="form-control" id="inputApellido" placeholder="Apellido">
+                                <input type="email" class="form-control" id="inputApellido" placeholder="Apellido" required>
                             </div>
                         </div>
                         <div>
                             <textarea class="form-control mb-2 " id="inputTema" rows="4"
-                                placeholder="Sobre qué quieres hablar?"></textarea>
+                                placeholder="Sobre qué quieres hablar?" required></textarea>
                             <div class="form-text mb-3">Recuerda incluir un título para tu charla.</div>
                         </div>
 

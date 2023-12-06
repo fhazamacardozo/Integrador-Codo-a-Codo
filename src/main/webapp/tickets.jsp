@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -17,7 +18,7 @@
         <div>
             <nav class="navbar navbar-expand-lg bg-dark border-bottom px-5" data-bs-theme="dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="index.jsp">
                         <img class="imgLogo" src="img\codoacodo.png">
                         Conf Bs As
                     </a>
@@ -31,7 +32,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">La conferencia</a>
+                                <a class="nav-link active" aria-current="page" href="index.jsp">La conferencia</a>
                             </li>
 
                             <li class="nav-item">
@@ -105,22 +106,22 @@
                     <form class="w-100">
                         <div class="row mb-3">
                             <div class="col-6">
-                                <input type="text" class="form-control" id="inputNombre" placeholder="Nombre">
+                                <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" required>
                             </div>
                             <div class="col-6">
-                                <input type="text" class="form-control" id="inputApellido" placeholder="Apellido">
+                                <input type="text" class="form-control" id="inputApellido" placeholder="Apellido" required>
                             </div>
                         </div>
 
                         <div>
-                            <input type="text" class="form-control mb-3" id="inputCorreo" placeholder="Correo">
+                            <input type="email" class="form-control mb-3" id="inputCorreo" placeholder="Correo" required>
                         </div>
 
                         <div class="row mb-3">
                             <div class="col-6">
                                 <label for="inputCantidad">Cantidad</label>
                                 <input type="number" class="form-control" id="inputCantidad" placeholder="Cantidad"
-                                    min="0">
+                                    min="0" required>
                             </div>
                             <div class="col-6">
                                 <label for="selectCategoria">Categoría</label>
@@ -138,10 +139,13 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-4">
+                                <button type="submit" id="btnVolver" class="btn btn-warning w-100 ">Volver</button>
+                            </div>
+                            <div class="col-4">
                                 <button type="submit" id="btnBorrar" class="btn btn-success w-100 ">Borrar</button>
                             </div>
-                            <div class="col-6">
+                            <div class="col-4">
                                 <button type="submit" id="btnResumen" class="btn btn-success w-100">Resumen</button>
                             </div>
                         </div>
