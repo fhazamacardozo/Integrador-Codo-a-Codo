@@ -15,7 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
     <title>Back Office</title>
 </head>
 <style>
@@ -26,11 +25,13 @@
         justify-content: center;
         align-items: center;
     }
-    a{
+
+    a {
         text-decoration: none;
         color: #000;
     }
-    h1{
+
+    h1 {
         color: blue;
     }
 </style>
@@ -67,7 +68,7 @@
     </table>
     <div class="row">
         <div class="col-2">
-            <button type="submit" class="btn btn-success w-100 "><a href="index.jsp">Volver</a></button>
+            <button type="submit" class="btn btn-success w-100 ">Volver</button>
         </div>
         <div class="col-2">
             <button type="submit" class="btn btn-warning w-100 "><a href="#">Oradores</a></button>
