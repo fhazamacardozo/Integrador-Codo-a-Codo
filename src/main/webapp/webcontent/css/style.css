@@ -1,45 +1,45 @@
-.imgLogo{
+.imgLogo {
     width: 90px;
     height: 52px;
 }
 
-footer{
-    background: linear-gradient(90deg, rgba(29,57,71,255),rgba(30,81,110,255));
+footer {
+    background: linear-gradient(90deg, rgba(29, 57, 71, 255), rgba(30, 81, 110, 255));
 }
 
-.imgCarousel{
+.imgCarousel {
     filter: brightness(.5);
 }
 
-.link-compra{
+.link-compra {
     color: rgb(120, 210, 53);
 }
 
-.link-compra:hover{
+.link-compra:hover {
     color: rgb(40, 74, 15);
 }
 
-.btn-success{
+.btn-success {
     background-color: rgb(40, 170, 70);
 }
 
-.contenedorOradores{
+.contenedorOradores {
     margin: 0 auto;
     padding: 0;
 }
 
-.card-group{
+.card-group {
     margin: 0 auto;
 }
 
-.img-fluid{
+.img-fluid {
     width: 100%;
 }
 
-.p-0{
-    overflow-x:hidden;
+.p-0 {
+    overflow-x: hidden;
 }
 
-#oradores{
+#oradores {
     padding-top: 1rem;
 }
