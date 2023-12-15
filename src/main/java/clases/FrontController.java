@@ -1,4 +1,4 @@
-package classes;
+package clases;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;

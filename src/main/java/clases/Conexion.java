@@ -1,8 +1,8 @@
-package classes;
+package clases;
 
 import java.sql.*;
 
-public class ConnectionSql {
+public class Conexion {
     public String driver = "com.mysql.cj.jdbc.Driver";
 
     public Connection getConecction() throws ClassNotFoundException {
@@ -21,7 +21,7 @@ public class ConnectionSql {
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         Connection connection;
-        ConnectionSql con = new ConnectionSql();
+        Conexion con = new Conexion();
         connection = con.getConecction();
 
         PreparedStatement ps = connection.prepareStatement("select * from oradores");
