@@ -1,4 +1,4 @@
-package classes;
+package clases;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,7 +13,7 @@ public class TicketDAO {
     Connection connection = null;
 
     public TicketDAO() throws ClassNotFoundException {
-        ConnectionSql con = new ConnectionSql();
+        Conexion con = new Conexion();
         try {
             connection = con.getConecction();
         } catch (ClassNotFoundException e) {
@@ -23,7 +23,7 @@ public class TicketDAO {
 
     /*LISTAR TICKETS*/
 
-    public List<Ticket> findAll() {
+    public List<Ticket> listarTickets() {
 
         List<Ticket> tickets = new ArrayList<>();
         PreparedStatement ps;
@@ -55,7 +55,7 @@ public class TicketDAO {
 
     /*GUARDAR TICKET*/
 
-    public boolean save(Ticket ticket) throws SQLException {
+    public boolean guardarTicket(Ticket ticket) throws SQLException {
 
         PreparedStatement ps;
         /*CONSULTAR AL PROFE*/
@@ -81,7 +81,7 @@ public class TicketDAO {
         }
     }
 
-    public boolean delete(int id) throws SQLException {
+    public boolean borrarTicket(int id) throws SQLException {
 
         PreparedStatement ps;
         try {
