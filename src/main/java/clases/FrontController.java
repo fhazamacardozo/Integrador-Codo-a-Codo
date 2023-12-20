@@ -1,41 +1,84 @@
 package clases;
 
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-
 import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/FrontController")
 public class FrontController extends HttpServlet {
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String accion = null;
-        TicketDAO ticketDAO = null;
+	private static final long serialVersionUID = 1L;
 
-        try{
-            ticketDAO = new TicketDAO();
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String accion = null;
+		TicketDAO ticketDAO = null;
 
-        }catch (ClassNotFoundException e){
-            System.out.println(e);
-        }
+		try {
+			ticketDAO = new TicketDAO();
 
-        RequestDispatcher rd = null;
-        accion = req.getParameter("accion");
+		} catch (ClassNotFoundException e) {
+			System.out.println(e);
+		}
 
-        if(accion==null || accion.isEmpty()){
-            rd = req.getRequestDispatcher("views/index.jsp");
-        }
+		RequestDispatcher rd = null;
+		accion = req.getParameter("accion");
 
-        else if (accion.equals("registrar")){
-            rd = req.getRequestDispatcher("views/tickets.jsp");
-        }
+		if (accion == null || accion.isEmpty()) {
+			rd = req.getRequestDispatcher("vistas/index.jsp");
+		} else if (accion.equals("registrar")) {
+			rd = req.getRequestDispatcher("vistas/tickets.jsp");
+		} else if (accion.equals("backoffice")) {
+			rd = req.getRequestDispatcher("vistas/backoffice.jsp");
+		} else if (accion.equals("volver")) {
+			rd = req.getRequestDispatcher("vistas/index.jsp");
+		} else if (accion.equals("insertar")) {
+			String nombre = req.getParameter("nombre");
+			String apellido = req.getParameter("apellido");
+			String mail = req.getParameter("mail");
+			int cantidad = Integer.parseInt(req.getParameter("cantidad"));
+			int categoria = Integer.parseInt(req.getParameter("tipo_ticket"));
+			int total = 0;
+			if (categoria == 1) {
+				total = (int)(200 * 0.2) * cantidad;
+			} else if (categoria == 2) {
+	            total = (int) ((200 * 0.5) * cantidad);
+			} else if (categoria == 3) {
+	            total = (int) ((200 * 0.85) * cantidad);
+			}
 
-        rd.forward(req,resp);
-    }
+			Ticket ticket = new Ticket(0, nombre, apellido, mail, cantidad, categoria, total);
+			try {
+				ticketDAO.guardarTicket(ticket);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 
+			rd = req.getRequestDispatcher("vistas/index.jsp");
+		}
+
+		else if (accion.equals("eliminar")) {
+			int id = Integer.parseInt(req.getParameter("id"));
+			try {
+				ticketDAO.borrarTicket(id);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			rd = req.getRequestDispatcher("vistas/backoffice.jsp");
+		}
+
+		rd.forward(req, resp);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doGet(request, response);
+	}
 
 }
