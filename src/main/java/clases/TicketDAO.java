@@ -40,7 +40,7 @@ public class TicketDAO {
                 String mail = rs.getString("mail");
                 int cantidad = rs.getInt("cantidad");
                 int tipo_ticket = rs.getInt("tipo_ticket");
-                float total_facturado = rs.getFloat("total_facturado");
+                int total_facturado = rs.getInt("total_facturado");
 
                 Ticket ticket = new Ticket(id, nombre, apellido, mail, cantidad, tipo_ticket, total_facturado);
                 tickets.add(ticket);
@@ -58,19 +58,18 @@ public class TicketDAO {
     public boolean guardarTicket(Ticket ticket) throws SQLException {
 
         PreparedStatement ps;
-        /*CONSULTAR AL PROFE*/
-        double total;
 
         try {
-            ps = connection.prepareStatement("insert into (nombre,apellido,mail,cantidad,tipo_ticket,total_facturado) " +
-                    "values (?,?,?,?,?,?)");
-
-            ps.setString(1, ticket.getNombre());
-            ps.setString(2, ticket.getApellido());
-            ps.setString(3, ticket.getMail());
-            ps.setInt(4, ticket.getCantidad());
-            ps.setInt(5, ticket.getTipo_ticket());
-            ps.setFloat(6, ticket.getTotal_facturado());
+            ps = connection.prepareStatement("insert into tickets (id,nombre,apellido,mail,cantidad,tipo_ticket,total_facturado) " +
+                    "values (?,?,?,?,?,?,?)");
+            
+            ps.setInt(1, ticket.getId());
+            ps.setString(2, ticket.getNombre());
+            ps.setString(3, ticket.getApellido());
+            ps.setString(4, ticket.getMail());
+            ps.setInt(5, ticket.getCantidad());
+            ps.setInt(6, ticket.getTipo_ticket());
+            ps.setInt(7, ticket.getTotal_facturado());
 
             ps.execute();
 
@@ -86,7 +85,7 @@ public class TicketDAO {
         PreparedStatement ps;
         try {
             ps = connection.prepareStatement("delete from tickets where id = ?");
-            ps.setInt(1,id);
+            ps.setInt(1, id);
             ps.execute();
 
             return true;
