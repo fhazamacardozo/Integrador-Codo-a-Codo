@@ -65,7 +65,7 @@
 					<td><%=resultado.get(i).getCantidad()%></td>
 					<td><%=tipoTicket%></td>
 					<td><%=resultado.get(i).getTotal_facturado()%></td>
-					<td class="text-center"><a href=<%=rutaEliminar%>>X</a></td>
+					<td><a class="text-center" style="text-decoration: none; color:#FF0000;" href=<%=rutaEliminar%>>X</a></td>
 				</tr>
 				<%
 				totalTickets += resultado.get(i).getTotal_facturado();

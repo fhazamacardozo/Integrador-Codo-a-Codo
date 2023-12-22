@@ -147,8 +147,8 @@
 
 						<div class="row">
 							<div class="col-4">
-							<button class="btn btn-warning col-2 m-2">
-								<a href="FrontController?accion=volver">Volver</a>
+							<button class="btn btn-warning w-100">
+								<a href="FrontController?accion=volver" style="text-decoration: none; color:#FFFFFF;">Volver</a>
 									</button>
 							</div>
 							<div class="col-4">
